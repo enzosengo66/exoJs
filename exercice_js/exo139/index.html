@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+</head>
+<body>
+    <!-- <p>ca va afficher 2 </p> -->
+    <script type="text/javascript">
+
+
+        /*
+        
+        Créez une fonction nommée 'nombreDansLaPortee' qui prendra en charge trois arguments 'nombre', 'min', 'max'.
+        
+        La fonction 'nombreDansLaPortee' se base sur l'argument 'nombre' donné à l'appel de la fonction afin de retourner une valeur de type nombre comprise entre 'min' et 'max'.
+        
+        Détails de la fonction :
+        
+        Si l'argument 'min' n'est pas un nombre valide, il vaudra -Infinity.
+        Si l'argument 'max' n'est pas un nombre valide, il vaudra Infinity.
+        
+        L'argument 'min' et 'max' s'inverse automatiquement si 'max' est inférieur à 'min'.
+        
+        Si 'nombre' est null alors il vaut 0.
+        Si 'nombre' est inférieur ou égal à 'min' alors on retourne 'min'.
+        Si 'nombre' est supérieur ou égal à 'max' alors on retourne 'max'.
+        
+        Si 'nombre' est contenu entre 'min' est 'max' alors on le retourne.
+        
+        NOTE : Vous pouvez si vous le souhaitez utiliser les fonctions prédéfinies suivantes :
+        - Math.min(valeur1, valeur2, ...) : La fonction Math.min renvoie le plus petit nombre d'une série de 0 ou plusieurs nombres.
+        - Math.max(valeur1, valeur2, ...) : La fonction Math.max renvoie le plus grand nombre d'une série de 0 ou plusieurs nombres.
+        - isNaN(valeur) : permet de déterminer si une valeur est un nombre égal à NaN (Not a Number).
+        - Number.NEGATIVE_INFINITY / Number.POSITIVE_INFINITY : servent respectivement à représenter l’infini côté négatif et côté positif.
+        
+        
+        */
+        function nombreDansLaPortee(nombre, min, max){
+        
+            if(typeof min != 'number'){
+                min = -Infinity; // -Infinity représente en javascript moins l'infini, c'est une valeur numérique qui est inférieur à toutes les autres
+            }
+            if(typeof max != 'number'){
+                max = Infinity; // Infinity représente en javascript l'infini, c'est une valeur numérique qui est supérieur à toutes les autres
+            }
+        
+            if( max < min ){
+                let min0 = min; // On stocke min dans une variable intermédiaire nommé min0 pour pouvoir le mettre dans max après qu'il ai été modifié.
+                min = max;
+                max = min0;
+            }
+        
+            if(nombre === null){ // Si nombre est égal à null, on met nombre à 0
+                nombre = 0;
+            }
+        
+            // Si nombre est inférieur ou égal à min, on retourne min
+            if(nombre <= min){
+                return min;
+            }
+        
+            // Si nombre est supérieur ou égal à max, on retourne max
+            if(nombre >= max){ 
+                return max;
+            }
+        
+            
+        
+        }
+        
+        nombreDansLaPortee(20, 30, 100) // Retourne 30
+        nombreDansLaPortee(40, 30, 100) // Retourne 40
+        nombreDansLaPortee(150, 30, 100) // Retourne 100
+        </script>
+</body>
+</html>

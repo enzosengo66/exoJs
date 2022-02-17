@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+</head>
+<body>
+    <!--ford-->
+   <h1 class="ford"></h1>
+   <p class="p1"></p>
+   <p class="p2"></p>
+   <p class="p3"></p>
+   
+    <!--bmw-->
+   <h1 class="bwm"></h1>
+   <p class="p4"></p></p>
+   <p class="p5"></p></p>
+   <p class="p6"></p></p>
+    <!--fiat-->
+   <h1 class="fiat"></h1>
+   <p class="p7"></p></p>
+   <p class="p8"></p></p>
+   <p class="p9"></p></p>
+
+    <script>
+        let myObj = {
+            fname :"John",
+            lname : "Doe",
+            age : 30,
+            cars : [
+                marque = ["Ford", "BMW", "Fiat"],
+                models = ["Fiesta","Focus","Mustang"], ["320", "X3 ", "X5"],["500", "Panda"],
+            ]
+        };
+        document.write("<h1 class=ford>"+myObj.cars[0][0]+ "<br>"+"</h1><p class=p1></p>"+ myObj.cars[1][0]+"<p class=p1></p>"+ myObj.cars[1][1]+"<p class=p1></p>"+ myObj.cars[1][2])
+        document.write("<h1 class=bwm>"+myObj.cars[0][1]+ "<br>"+"</h1><p class=p4></p>"+ myObj.cars[2][0]+"<p class=p5></p>"+ myObj.cars[2][1]+"<p class=p6></p>"+ myObj.cars[2][2])
+        document.write("<h1 class=fiat>"+myObj.cars[0][2]+ "<br>"+"</h1><p class=p1*7></p>"+ myObj.cars[3][0]+"<p class=p8></p>"+ myObj.cars[3][1])
+        
+       
+
+
+    </script>
+</body>
+</html>

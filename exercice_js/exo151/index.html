@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+</head>
+<body>
+    <!-- <p>ca va afficher 2 </p> -->
+    <script>
+        var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
+
+    let fruit = '';
+
+    console.log(fruits);
+
+    do{
+
+        fruit = prompt("Veuillez saisir un fruit");
+        // Si le fruit saisi se trouve dans le tableau
+        if(fruits.indexOf(fruit) != -1){ 
+            console.log('Voilà votre fruit : '+fruit);
+            console.log(fruits);
+            fruits.splice(fruits.indexOf(fruit), 1);
+        }
+
+
+    }while( fruits.length > 0 ) /* si le tableau est vide */
+
+        alert('Plus de fruits de disponible');
+
+   
+    
+
+    </script>
+</body>
+</html>

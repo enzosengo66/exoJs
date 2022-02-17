@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+</head>
+<body>
+    <!-- <p>ca va afficher 2 </p> -->
+    <script>
+
+        //Code sensible à la casse donc mettez des majuscules pour chaque marque !
+
+        let tab = [
+
+            ['Toyoya', 'Volvo', 'Mercedes', 'Tesla', 'BMW'],
+            ['Samsung', 'Xiaomi', 'Huawei', 'Iphone', 'Nokia'],
+            ['Dell', 'Acer', 'Asus', 'HP', 'MAC']
+        ]
+        
+        //réponds à la demande pour la voiture
+        do{
+            user = prompt("Saississez une marque de voiture");
+            if(user == tab[0][0] || user == tab[0][1] || user == tab[0][2] ||user == tab[0][3] ||user == tab[0][4]){
+            alert("Voiture disponible");
+            break;
+            }else{
+                alert("Voiture non disponible");
+            }
+        }
+        while(user != tab[0])
+
+        //réponds à la demande pour le téléphone
+        do{
+            user = prompt("Saississez une marque de téléphone");
+            if(user == tab[1][0] || user == tab[1][1] || user == tab[1][2] ||user == tab[1][3] ||user == tab[1][4]){
+            alert("téléphone disponible");
+            break;
+            }else{
+                alert("téléphone non disponible");
+            }
+        }
+        while(user != tab[0])
+
+        //réponds à la demande pour l'ordiinateur
+        do{
+            user = prompt("Saississez une marque de pc");
+            if(user == tab[2][0] || user == tab[2][1] || user == tab[2][2] ||user == tab[2][3] ||user == tab[2][4]){
+            alert("pc disponible");
+            break;
+            }else{
+                alert("pc non disponible");
+            }
+        }
+        while(user != tab[0])
+    
+    
+
+    </script>
+</body>
+</html>
