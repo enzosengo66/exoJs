@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+</head>
+<body>
+    <div id="div-employe">
+    </div>
+
+   
+    <script>
+       class Personne{
+           constructor(nom){
+               this.nom = nom;
+           }
+           salutation(){
+               return "Bonjour, je m'appelle "+ this.nom;
+           }
+       }
+       class Professeur extends Personne{
+           constructor(nom, matiere){
+               super(nom)
+               this.matiere = (matiere);
+           }
+           salutation(){
+               return "Bonjour, je m'appelle "+ this.nom + ", la matière que j'enseigne est " + this.matiere;
+           }
+       }
+       const personne1 = new Personne("Jean");
+       const personne2 = new Professeur ("Thierry", "Informatique");
+       console.log(personne1.salutation());
+       console.log(personne2.salutation());
+      
+
+
+       
+     
+       
+        
+
+
+    </script>
+</body>
+</html>

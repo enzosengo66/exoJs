@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+</head>
+<body>
+    <div id="div-employe">
+    </div>
+
+   
+    <script>
+       class Animal{
+           constructor(nom,vitesse,alimentation){
+               this.nom = nom;
+               this.vitesse = vitesse;
+               this.alimentation = alimentation;
+           }
+            boire(){
+                return this.nom + " se met à boire";
+            }
+            manger(){
+                return this.nom + " se met à manger";
+            }
+       }
+
+       class Oiseau extends Animal{
+           constructor(nom,vitesse,alimentation){
+               Animal.call(this, nom,vitesse,alimentation)
+           }
+           voler(){
+              return this.nom + " se met à voler";
+           }
+       }
+       class Poisson extends Animal{
+           constructor(nom,vitesse,alimentation){
+               Animal.call(this, nom,vitesse,alimentation)
+           }
+           nager(){
+               return this.nom + " se met à nager";
+           }
+
+       }
+       const koala = new Animal("koala",3.2, "herbivore");
+       const faucon = new Animal("faucon",390, "carnivore");
+       const requin = new Animal("requin",50, "carnivore");
+       console.log("Le nom de l\'animal est "+koala.nom + " qui a une vitesse de "+koala.vitesse+" km/h" + " et il est "+koala.alimentation)
+       console.log("Le nom de l\'animal est "+faucon.nom + " qui a une vitesse de "+faucon.vitesse+" km/h" + " et il est "+faucon.alimentation)
+       console.log("Le nom de l\'animal est "+requin.nom + " qui a une vitesse de "+requin.vitesse+" km/h" + " et il est "+requin.alimentation)
+       
+        
+
+
+    </script>
+</body>
+</html>
