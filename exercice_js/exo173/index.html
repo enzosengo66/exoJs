@@ -8,22 +8,38 @@
 </head>
 <body>
     <div id="voiture">
-
     </div>
+    <img id="voiture-img">
+    </img>
    
     <script>
        class Voiture{
            constructor(marque, prix, position, image_url){
-               marque = m;
-               prix = p;
-               position = 0;
-               image_url = i;
+               this.marque = marque;
+               this.prix = prix;
+               this.position = position;
+               this.image_url = image_url;
            }
            
+            rouler() {
+               this.position = this.position +100;
+               
+           } 
+           afficher(){
+            {document.getElementById("voiture").innerHTML+= 
+           "Marque: "+ this.marque+"<br>" + "Prix: "+this.prix+"<br>"+"Position: "+this.position+ this.image_url};
+           
+           }
            
           
-       };
+       }
+    
+       let car = new Voiture("Toyota", 20000, 0, "<img src=https://cdn.drivek.it/configurator-covermobile/cars/fr/768/TOYOTA/RAV4-PHEV/39823_SUV-5-DOORS/toyota-rav4-phev-2020-mobile.jpg>");
+       car.rouler();
+       car.afficher();
        
+       
+
        
        
         

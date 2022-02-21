@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+</head>
+<body>
+    <div id="div-employe">
+    </div>
+
+   
+    <script>
+       class Employee{
+           constructor(nom,prenom,salaire,statut){
+               this.nom = nom;
+               this.prenom = prenom;
+               this.salaire = salaire;
+               this.statut = statut;
+           }
+            ajouter_salaire(){
+                this.salaire+=200;
+            }
+            baisser(){
+                this.salaire-=200;
+            }
+            virer(){
+                this.statut = "viré"
+            }
+            embaucher(){
+                this.statut = "embauché"
+            }
+       }
+       let emp = new Employee ("La chomeur", "Rayan", 3000, "En statut")
+       emp.virer()
+       console.log(emp.nom+" "+ emp.prenom+" "+"qui gagne "+emp.salaire+"/mois "+"a été "+emp.statut)//le salarié a été viré
+
+       emp.embaucher()
+       console.log(emp.nom+" "+ emp.prenom+" "+"qui gagne "+emp.salaire+"/mois "+"a été "+emp.statut)//le salarié a été embauché
+
+       emp.ajouter_salaire()
+       console.log(emp.nom+" "+ emp.prenom+" "+"qui gagne "+emp.salaire+"/mois "+"a été "+emp.statut)//le salarié a reçu une augmentations
+
+       console.log(emp)
+       
+        
+
+
+    </script>
+</body>
+</html>
